@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package hotelservice;
+
+service HotelService {
+  rpc checkIn(CheckInRequest) returns (CheckInResponse);
+}
+
+message CheckInRequest {
+  string guestName = 1;
+  string checkInDate = 2;
+}
+
+message CheckInResponse {
+  string confirmationMessage = 1;
+}
+
