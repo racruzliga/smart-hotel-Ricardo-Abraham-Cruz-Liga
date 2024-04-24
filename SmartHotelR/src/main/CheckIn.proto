@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option java_package = "com.racruzliga";
+
+message CheckInRequest {
+  string guestName = 1;
+  string checkInDate = 2;
+}
+
+message CheckInResponse {
+  string message = 1;
+}
+
+service CheckInService {
+  rpc PerformCheckIn(CheckInRequest) returns (CheckInResponse);
+}
